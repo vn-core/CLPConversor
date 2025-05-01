@@ -1,0 +1,141 @@
+body{
+    background-color: rgb(19, 19, 23);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container{
+    background-color: rgb(56, 56, 58);
+    margin-top: 2em;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1200px;
+}
+
+h1, h2, h3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.conversor h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #0dcaf0;
+}
+
+.menu {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.historial {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.botonbuscar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resultados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2em;
+    color: #0dcaf0;
+    margin-top: 20px;
+}
+
+.form-control, .form-select {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #0dcaf0;
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgba(13, 202, 240, 0.25);
+}
+
+.form-select option {
+    background-color: rgb(56, 56, 58);
+    color: white;
+    padding: 10px;
+}
+
+.form-select:focus option {
+    background-color: rgb(56, 56, 58);
+    color: white;
+}
+
+/* Estilo para la opción seleccionada */
+.form-select option:checked {
+    background-color: #0dcaf0;
+    color: white;
+}
+
+.btn-info {
+    background-color: #0dcaf0;
+    border: none;
+    padding: 10px 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-info:hover {
+    background-color: #0b9ebc;
+    transform: scale(1.05);
+}
+
+#historialChart {
+    width: 100% !important;
+    height: 300px !important;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 1em;
+    }
+    
+    .conversor h1 {
+        font-size: 2em;
+    }
+    
+    .resultados {
+        font-size: 1.5em;
+    }
+}
+
+.moneda-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.moneda-icon.girar {
+    animation: girarMoneda 1s linear;
+}
+
+@keyframes girarMoneda {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
